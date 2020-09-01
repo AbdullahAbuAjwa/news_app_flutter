@@ -14,7 +14,7 @@ class CategoryCard extends StatelessWidget {
             ))
         .toList();
     return Container(
-      height: 400,
+      height: 600,
       child: GridView.builder(
         gridDelegate:
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
