@@ -10,7 +10,6 @@ class News {
   var url;
   var urlToImage;
   var publishedAt;
-  var content;
   var newspaperName;
 
   News({
@@ -20,7 +19,6 @@ class News {
     this.url,
     this.urlToImage,
     this.publishedAt,
-    this.content,
     this.newspaperName,
   });
 }
@@ -40,23 +38,22 @@ class NewsProvider with ChangeNotifier {
       var response = await get(url);
       var jsonData = jsonDecode(response.body) as Map<Object, dynamic>;
       if (jsonData['status'] == 'ok') {
-        final List<News> loadedProducts = [];
+        final List<News> listNews = [];
 
         jsonData['articles'].forEach((element) {
           if (element['urlToImage'] != null && element['description'] != null) {
-            loadedProducts.add(new News(
+            listNews.add(new News(
               author: element['author'],
               title: element['title'],
               description: element['description'],
               url: element['url'],
               urlToImage: element['urlToImage'],
               publishedAt: element['publishedAt'],
-              content: element['content'],
               newspaperName: element['source']['name'],
             ));
           }
         });
-        _items = loadedProducts;
+        _items = listNews;
         notifyListeners();
       }
     } catch (error) {

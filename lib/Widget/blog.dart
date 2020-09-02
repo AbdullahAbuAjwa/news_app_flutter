@@ -24,12 +24,14 @@ class _BlogState extends State<Blog> {
       builder: (ctx, snapshot) =>
           snapshot.connectionState == ConnectionState.waiting
               ? Center(
-                  heightFactor: 12,
-                  widthFactor: 12,
+                  heightFactor: 15,
+                  widthFactor: 15,
                   child: CircularProgressIndicator(),
                 )
               : Consumer<NewsProvider>(
                   child: Center(
+                    heightFactor: 14,
+                    widthFactor: 14,
                     child: const Text(
                         'Please make sure you are connected to the Internet!',
                         style: TextStyle(fontSize: 22)),
@@ -135,7 +137,7 @@ class _BlogItemCardState extends State<BlogItemCard> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   IconButton(
-                 //   alignment: Alignment.topRight,
+                    //   alignment: Alignment.topRight,
                     icon: Icon(Icons.open_in_browser, color: Colors.blue),
                     onPressed: () {
                       Navigator.push(context,

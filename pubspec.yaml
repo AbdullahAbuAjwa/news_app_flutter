@@ -26,6 +26,8 @@ dependencies:
   webview_flutter: ^0.3.22+1
   custom_refresh_indicator: ^0.8.0+1
   share: ^0.6.4+3
+  carousel_pro: ^1.0.0
+  flutter_swiper: ^1.1.6
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -46,33 +46,28 @@ class CategoryItemCard extends StatelessWidget {
         }));
       },
       child: Container(
-        //  height: 120,
         margin: EdgeInsets.only(top: 8, left: 4, right: 4),
-        child: Card(
-          color: Color(0xFFECEFF1),
-          elevation: 5,
-          child: Column(children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Container(
-                margin: EdgeInsets.only(top: 12),
-                child: CachedNetworkImage(
-                  imageUrl: imageUrl,
-                  width: 160,
-                  height: 130,
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) =>
-                      Center(child: CircularProgressIndicator()),
-                ),
+        child: Column(children: <Widget>[
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              margin: EdgeInsets.only(top: 12, right: 8, left: 8),
+              child: CachedNetworkImage(
+                imageUrl: imageUrl,
+                //         width: 160,
+                height: 130,
+                fit: BoxFit.cover,
+                placeholder: (context, url) =>
+                    Center(child: CircularProgressIndicator()),
               ),
             ),
-            SizedBox(height: 10),
-            Text(
-              catName,
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )
-          ]),
-        ),
+          ),
+          SizedBox(height: 10),
+          Text(
+            catName,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          )
+        ]),
       ),
     );
   }
