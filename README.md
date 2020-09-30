@@ -1,7 +1,7 @@
 # news_app
 
-A new Flutter application.
-
+App for the most important and latest global news, the news is updated first-hand and contains several sections such as sports, health, technical news, and others.
+Development by Flutter, Dart language.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
